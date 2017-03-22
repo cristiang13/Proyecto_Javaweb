@@ -1,0 +1,108 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core"
+          
+      xmlns:p="http://primefaces.org/ui"
+      xmlns:jsf="http://xmlns.jcp.org/jsf">
+
+    <body>
+            
+        <ui:composition template="./template/plantilla.xhtml">
+
+            <ui:define name="content">
+                
+               
+             
+                <h5 style="text-align: center"> Datos Estudiante</h5>
+                
+                
+                <div class ="card-panel " style="height: 80%"> 
+
+                                <h:form id="formulario">
+                                    <h:messages showDetail="true" showSummary="ture" />
+                                           <div class="input-field col s6">
+                                            <h:outputLabel class="active">Identificacion</h:outputLabel>
+                                            <h:inputText id="intxt" value="#{controlEstudiantes.estudiante.id}"> </h:inputText><br></br>
+                                            
+                                        </div>
+                                  
+                                   
+                                        <div class="input-field col s6">
+                                            <h:outputLabel class="active">Nombres</h:outputLabel>
+                                            <h:inputText id="intxt1" value="#{controlEstudiantes.estudiante.nombres}"> </h:inputText><br></br>
+                                            
+                                        </div>
+                                         <div class="input-field col s6">
+                                            <h:outputLabel class="active">Apellidos</h:outputLabel>
+                                            <h:inputText id="intxt2" value="#{controlEstudiantes.estudiante.apellidos}"> </h:inputText><br></br>
+                                        </div>
+                                  
+                                    
+                                    
+                                        <div class="input-field col s6">
+                                           <h:outputLabel class="active">Email</h:outputLabel>
+                                           <h:inputText id="intxt3" value="#{controlEstudiantes.estudiante.email}"> </h:inputText><br></br>
+                                       </div>
+
+                                        <div class="input-field col s6">
+                                           <h:outputLabel class="active">Direccion</h:outputLabel>
+                                           <h:inputText id="intxt4" value="#{controlEstudiantes.estudiante.direccion}"> </h:inputText><br></br>                                            
+                                       </div>
+                                     <div class="input-field col s4">
+                                           <h:outputLabel class="active">Telefono fijo</h:outputLabel>
+                                           <h:inputText id="intxt5" value="#{controlEstudiantes.estudiante.fijo}"> </h:inputText><br></br>                                            
+                                       </div>
+                                   
+                                     <div class="input-field col s4">
+                                           <h:outputLabel class="active">No Celular</h:outputLabel>
+                                           <h:inputText id="intxt6" value="#{controlEstudiantes.estudiante.movil}"> </h:inputText><br></br>                                            
+                                       </div>
+                                    <div class="input-field col s4">
+                                           <h:outputLabel class="active">Grupo</h:outputLabel>
+                                           <h:inputText id="intxt7" value="#{controlEstudiantes.estudiante.grupo}"> </h:inputText><br></br>                                            
+                                       </div>
+                                    
+                                    <div class="input-field col s2">
+                                       <h:outputLabel>fecha de nacimiento</h:outputLabel>
+                                    </div>
+                                    
+                                    <div class="input-field col s3">
+                                        <input type="date"  jsf:value="#{controlEstudiantes.estudiante.fecha_nac}" name="fecha" ><f:convertDateTime pattern="yyyy-MM-dd" /></input>
+                                                                                                           
+                                    </div>
+                                    
+                                      <div class="input-field col s2">
+                                          <h:outputLabel>Ingresar Foto</h:outputLabel>
+                                          <h:inputText></h:inputText>
+                                    </div>
+                                   
+                                   
+                                    <div  style="text-align: center">
+                                        <div class="input-field col s6">
+                                            <h:commandButton value="submit" action="#{controlEstudiantes.registrarUsuario()}" styleClass="waves-effect waves-light btn " >
+                                             <!-- <f:ajax execute="@form" render="outxt" resetValues="true"> </f:ajax>-->
+                                            </h:commandButton>
+                                        </div>
+                                      <!--  <div class="input-field col s6">
+                                        <h:commandButton immediate="true" value="Clear" styleClass="waves-effect waves-light btn">
+                                           <f:ajax render="@form" />
+                                        </h:commandButton> 
+                                        </div>-->
+                                    </div>
+                                </h:form>
+                                
+
+                                              
+                 </div>
+            
+                
+           
+            </ui:define>
+
+        </ui:composition>
+
+    </body>
+</html>

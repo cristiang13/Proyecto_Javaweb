@@ -1,0 +1,72 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+
+    <body>
+
+        <ui:composition template="./template/plantilla.xhtml">
+
+            <ui:define name="content">
+                <h:form>
+               
+                <h:dataTable value="#{controlEstudiantes.lista}" var="var" styleClass="bordered highlight">
+                 <h:column>
+                    <f:facet name="header">Identificación</f:facet>
+                    <h:outputText value="#{var.id}"/>
+                </h:column>
+                
+                <h:column>
+                    <f:facet name="header">Nombres</f:facet>
+                    <h:outputText value="#{var.nombres}"/>
+                </h:column>
+                
+                <h:column>
+                    <f:facet name="header">Apellidos</f:facet>
+                    <h:outputText value="#{var.apellidos}"/>
+                </h:column>
+                
+            
+                
+                <h:column>
+                    <f:facet name="header">email</f:facet>
+                    <h:outputText value="#{var.email}"/>
+                </h:column>
+                
+                <h:column>
+                    <f:facet name="header">telofono fijo</f:facet>
+                    <h:outputText value="#{var.fijo}"/>
+                </h:column>
+                    
+                <h:column>
+                    <f:facet name="header">telefono movil</f:facet>
+                    <h:outputText value="#{var.movil}"/>
+                </h:column>    
+                    
+                <h:column>
+                    <f:facet name="header">direccion</f:facet>
+                    <h:outputText value="#{var.direccion}"/>
+                </h:column>    
+                
+                <h:column>
+                    <f:facet name="header">grupo</f:facet>
+                    <h:outputText value="#{var.grupo}"/>
+                </h:column>  
+                
+               <h:column>
+                    <f:facet name="header">Opciones</f:facet>
+                    <h:column><i class="small material-icons" href="#">delete</i></h:column>
+                    <h:column><i class="small material-icons">mode_edit</i></h:column>
+                    
+                </h:column> 
+                    
+                </h:dataTable>
+            </h:form>
+            </ui:define>
+
+        </ui:composition>
+
+    </body>
+</html>
